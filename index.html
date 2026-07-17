@@ -64,9 +64,10 @@
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
   .about-copy p{margin-bottom:20px;color:#4a4f5a}
   .about-accent{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9rem;color:var(--navy);margin-top:10px}
-  .about-block{background:var(--navy);min-height:440px;display:flex;align-items:center;justify-content:center;position:relative}
-  .about-block::before{content:"";position:absolute;inset:18px;border:1px solid var(--gold);opacity:.5}
-  .about-block span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.6rem;color:var(--gold);text-align:center;padding:0 30px}
+  .about-block{background:var(--navy);min-height:440px;position:relative;overflow:hidden}
+  .about-block img{width:100%;height:100%;min-height:440px;object-fit:cover;display:block}
+  .about-block::before{content:"";position:absolute;inset:18px;border:1px solid var(--gold);opacity:.5;z-index:2;pointer-events:none}
+  .about-block .cap{position:absolute;bottom:22px;left:22px;z-index:3;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:#fff;background:rgba(23,35,63,.72);padding:8px 18px;border:1px solid rgba(201,180,140,.5)}
 
   /* TREATMENTS */
   .treatments{background:var(--navy);color:var(--cream)}
@@ -200,7 +201,7 @@
         <p>With over 50 years of combined medical aesthetics experience, our physicians and nurse injectors are dedicated to results that look like the best version of you — never overdone.</p>
         <div class="about-accent">The art of subtlety.</div>
       </div>
-      <div class="about-block reveal"><span>Timeless beauty,<br>refined.</span></div>
+      <div class="about-block reveal"><img src="img/renue-about.jpg" alt="Refined, natural results at Renue Medical Spa"><span class="cap">Timeless beauty, refined.</span></div>
     </div>
   </div>
 </section>
