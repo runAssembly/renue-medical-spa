@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renue Medical Spa — The Art of Subtlety · Kitsilano, Vancouver</title>
+<meta name="description" content="Renue Medical Spa — medical aesthetics in Kitsilano, Vancouver. The art of subtlety: timeless beauty, refined. 50+ years combined experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1c2b49;
+    --navy-dark:#17233f;
+    --cream:#f4efe6;
+    --gold:#c9b48c;
+    --ink:#2a2f3a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:'Jost',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--gold)}
+  .hair{width:56px;height:1px;background:var(--gold);border:none;margin:18px 0}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;letter-spacing:.18em;text-transform:uppercase;font-size:.74rem;padding:16px 34px;cursor:pointer;border:1px solid var(--gold);background:var(--gold);color:var(--navy-dark);transition:.3s}
+  .btn:hover{background:transparent;color:var(--gold)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(244,239,230,.55)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* NAV */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(23,35,63,.92);backdrop-filter:blur(8px);transition:.4s}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1300px;margin:0 auto}
+  .logo img{height:46px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{color:var(--cream);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:300;transition:.3s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-links .btn{color:var(--navy-dark);padding:12px 26px}
+  .nav-links .btn:hover{color:var(--gold)}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+  .hamburger span{width:26px;height:1.5px;background:var(--cream);transition:.3s}
+
+  /* HERO */
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;
+    background:linear-gradient(100deg,rgba(23,35,63,.94) 0%,rgba(28,43,73,.78) 45%,rgba(28,43,73,.45) 100%),
+    url('img/renue-hero.jpg') center/cover no-repeat, var(--navy)}
+  .hero-inner{color:var(--cream);max-width:660px;padding:120px 0 60px}
+  .hero h1{font-size:clamp(3.2rem,9vw,6.5rem);font-weight:300;letter-spacing:.01em;margin:18px 0 6px}
+  .hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.5rem,3.5vw,2.3rem);color:var(--gold);font-weight:400;margin-bottom:22px}
+  .hero p{font-weight:300;font-size:1.02rem;max-width:520px;color:rgba(244,239,230,.9);margin-bottom:34px}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:28px}
+  .hero-phone{font-size:.82rem;letter-spacing:.16em;color:rgba(244,239,230,.75)}
+  .hero-phone a{color:var(--gold)}
+
+  /* SECTIONS */
+  section{padding:clamp(70px,10vw,130px) 0}
+  .center{text-align:center}
+  .sec-title{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:300}
+
+  /* ABOUT */
+  .about{background:var(--cream)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .about-copy p{margin-bottom:20px;color:#4a4f5a}
+  .about-accent{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9rem;color:var(--navy);margin-top:10px}
+  .about-block{background:var(--navy);min-height:440px;display:flex;align-items:center;justify-content:center;position:relative}
+  .about-block::before{content:"";position:absolute;inset:18px;border:1px solid var(--gold);opacity:.5}
+  .about-block span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.6rem;color:var(--gold);text-align:center;padding:0 30px}
+
+  /* TREATMENTS */
+  .treatments{background:var(--navy);color:var(--cream)}
+  .treatments .sec-title{color:var(--cream)}
+  .tgroup{margin-top:60px}
+  .tgroup h3{font-size:1.9rem;color:var(--gold);font-weight:400;margin-bottom:22px;display:flex;align-items:center;gap:16px}
+  .tgroup h3::after{content:"";flex:1;height:1px;background:rgba(201,180,140,.35)}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .tcard{border:1px solid rgba(244,239,230,.16);padding:26px 24px;cursor:pointer;transition:.3s;background:rgba(255,255,255,.02)}
+  .tcard:hover{border-color:var(--gold);background:rgba(201,180,140,.06);transform:translateY(-3px)}
+  .tcard h4{font-size:1.35rem;font-weight:500;margin-bottom:8px}
+  .tcard .more{font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+  /* TEAM */
+  .team{background:var(--cream)}
+  .team-intro{max-width:640px;margin:0 auto;color:#4a4f5a}
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px}
+  .member{text-align:center}
+  .member .photo{aspect-ratio:1/1.15;overflow:hidden;background:var(--navy);margin-bottom:16px}
+  .member img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:.5s}
+  .member:hover img{transform:scale(1.05)}
+  .member h4{font-size:1.35rem;color:var(--navy);font-weight:500}
+  .member .role{font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+
+  /* REVIEWS */
+  .reviews{background:var(--navy-dark);color:var(--cream)}
+  .reviews .sec-title{color:var(--cream)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px}
+  .review{border:1px solid rgba(244,239,230,.16);padding:38px 32px}
+  .stars{color:var(--gold);letter-spacing:.2em;margin-bottom:18px;font-size:.9rem}
+  .review p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.28rem;line-height:1.5;color:rgba(244,239,230,.92)}
+  .review .name{font-family:'Jost',sans-serif;font-style:normal;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:22px}
+
+  /* CONTACT */
+  .contact{background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:stretch;margin-top:50px}
+  .contact-info p{margin-bottom:14px;color:#4a4f5a}
+  .contact-info strong{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--navy);font-size:1.15rem}
+  .contact-info a{color:var(--navy);border-bottom:1px solid var(--gold)}
+  .map-frame{width:100%;min-height:360px;border:1px solid rgba(28,43,73,.2);filter:grayscale(.3)}
+  .map-frame iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+  /* FOOTER */
+  footer{background:var(--navy-dark);color:rgba(244,239,230,.8);padding:70px 0 34px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start}
+  .foot-logo img{height:52px;margin-bottom:20px}
+  footer .tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--gold);max-width:280px}
+  footer h5{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:var(--gold);margin-bottom:18px;font-weight:400}
+  footer ul{list-style:none}
+  footer li{margin-bottom:10px}
+  footer a:hover{color:var(--gold)}
+  .foot-book{background:none;border:1px solid var(--gold);color:var(--gold);cursor:pointer;padding:6px 0;font-family:inherit}
+  .copy{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid rgba(244,239,230,.12);font-size:.72rem;letter-spacing:.14em;color:rgba(244,239,230,.5)}
+
+  /* MODAL */
+  .modal-ov{position:fixed;inset:0;background:rgba(15,22,40,.75);backdrop-filter:blur(4px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+  .modal-ov.open{display:flex}
+  .modal{background:var(--cream);max-width:540px;width:100%;max-height:90vh;overflow-y:auto;padding:48px;position:relative;border-top:3px solid var(--gold)}
+  .modal .close{position:absolute;top:18px;right:22px;background:none;border:none;font-size:1.8rem;color:var(--navy);cursor:pointer;line-height:1}
+  .modal .eyebrow{margin-bottom:10px}
+  .modal h3{font-size:2.2rem;color:var(--navy);margin-bottom:16px}
+  .modal p{color:#4a4f5a}
+  .modal .btn{margin-top:26px}
+  form label{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin:16px 0 6px}
+  form input,form select,form textarea{width:100%;padding:12px 14px;border:1px solid rgba(28,43,73,.25);background:#fff;font-family:inherit;font-size:.95rem;color:var(--ink)}
+  form textarea{resize:vertical;min-height:90px}
+  .success{background:var(--navy);color:var(--cream);padding:30px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .team-grid{grid-template-columns:repeat(2,1fr)}
+    .rgrid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:34px}
+    .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;background:var(--navy-dark);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.4s;padding:40px}
+    .nav-links.open{transform:none}
+    .hamburger{display:flex;z-index:120}
+  }
+  @media(max-width:520px){
+    .team-grid{grid-template-columns:1fr}
+    .modal{padding:34px 26px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav>
+    <a href="#top" class="logo"><img src="https://www.renuemedspa.com/wp-content/uploads/2025/03/651b5ac0beccf35f361fd8bc_Logo_Cream.webp" alt="Renue Medical Spa"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#team">Team</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.instagram.com/renuemedspa/" target="_blank" rel="noopener">Instagram</a>
+      <button class="btn" onclick="openBook()">Book Now</button>
+    </div>
+    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow">Medical Aesthetics · Kitsilano, Vancouver</div>
+      <h1>The Art of Subtlety</h1>
+      <div class="sub">Timeless beauty, refined.</div>
+      <p>Aesthetic treatments that refine and enhance your natural beauty — from a team with 50+ years of combined medical aesthetics experience.</p>
+      <div class="hero-btns">
+        <button class="btn" onclick="openBook()">Book a Consultation</button>
+        <a href="#treatments" class="btn btn-ghost">Explore Treatments</a>
+      </div>
+      <div class="hero-phone">Call us · <a href="tel:6046175557">604-617-5557</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <div class="eyebrow">Who We Are</div>
+        <hr class="hair">
+        <h2 class="sec-title" style="margin-bottom:22px">Refined, Natural, Yours</h2>
+        <p>At Renue, we specialize in the art of subtlety — delivering aesthetic treatments that refine and enhance your natural beauty. We believe timeless beauty is a personal journey, guided by personalized consultations and expert hands.</p>
+        <p>With over 50 years of combined medical aesthetics experience, our physicians and nurse injectors are dedicated to results that look like the best version of you — never overdone.</p>
+        <div class="about-accent">The art of subtlety.</div>
+      </div>
+      <div class="about-block reveal"><span>Timeless beauty,<br>refined.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="treatments" id="treatments">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">What We Offer</div>
+      <hr class="hair" style="margin:18px auto">
+      <h2 class="sec-title">Treatments</h2>
+    </div>
+    <div id="treatmentGroups"></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Our Team</div>
+      <hr class="hair" style="margin:18px auto">
+      <h2 class="sec-title" style="margin-bottom:18px">Expert Hands</h2>
+      <p class="team-intro">A team of physicians and registered nurse injectors with 50+ years of combined medical aesthetics experience.</p>
+    </div>
+    <div class="team-grid" id="teamGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Kind Words</div>
+      <hr class="hair" style="margin:18px auto">
+      <h2 class="sec-title">Reviews</h2>
+    </div>
+    <div class="rgrid">
+      <div class="review reveal"><div class="stars">★★★★★</div><p>Jenn is hands down the best injectionist in Vancouver. She carefully explains which procedures give the best results and ensures everything looks natural and balanced. Her professionalism and attention to detail keep me coming back.</p><div class="name">Leigh White</div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>Andra is really great — I feel very comfortable with her. She is knowledgeable, explains everything in a way that makes sense, and is never pushy. The clinic is clean and lovely and the staff are always so friendly.</p><div class="name">Caprice Rutherford</div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>Liz made the entire experience so comfortable. As someone new to this, I appreciated her kindness, patience and expertise. She never made me feel rushed, and the results were exactly what I hoped for — natural and perfect.</p><div class="name">Kim D.S</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Visit Us</div>
+      <hr class="hair" style="margin:18px auto">
+      <h2 class="sec-title">Contact & Location</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p><strong>Renue Medical Spa</strong></p>
+        <p>2225 West Broadway<br>Vancouver, BC V6K 2E4</p>
+        <p>Phone · <a href="tel:6046175557">604-617-5557</a></p>
+        <p>Email · <a href="mailto:info@renuemedspa.com">info@renuemedspa.com</a></p>
+        <p>Instagram · <a href="https://www.instagram.com/renuemedspa/" target="_blank" rel="noopener">@renuemedspa</a></p>
+        <button class="btn" style="margin-top:16px" onclick="openBook()">Book a Consultation</button>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://www.google.com/maps?q=2225%20West%20Broadway%20Vancouver%20BC%20V6K%202E4&output=embed" loading="lazy" title="Renue Medical Spa location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="https://www.renuemedspa.com/wp-content/uploads/2025/03/651b5ac0beccf35f361fd8bc_Logo_Cream.webp" alt="Renue Medical Spa"></div>
+        <p class="tagline">The Art of Subtlety — Medical Aesthetics in Kitsilano, Vancouver</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="foot-book" onclick="openBook()">Book Now</button></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>2225 West Broadway</li>
+          <li>Vancouver, BC V6K 2E4</li>
+          <li><a href="tel:6046175557">604-617-5557</a></li>
+          <li><a href="mailto:info@renuemedspa.com">info@renuemedspa.com</a></li>
+          <li><a href="https://www.instagram.com/renuemedspa/" target="_blank" rel="noopener">@renuemedspa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Renue Medical Spa. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- TREATMENT MODAL -->
+<div class="modal-ov" id="treatModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal('treatModal')">&times;</button>
+    <div class="eyebrow" id="tmCat"></div>
+    <h3 id="tmName"></h3>
+    <p id="tmDesc"></p>
+    <button class="btn" onclick="closeModal('treatModal');openBook(document.getElementById('tmName').textContent)">Book This Treatment</button>
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-ov" id="bookModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal('bookModal')">&times;</button>
+    <div id="bookInner">
+      <div class="eyebrow">Book a Consultation</div>
+      <h3>Begin Your Journey</h3>
+      <p>Share a few details and our team will be in touch to confirm your consultation.</p>
+      <form id="bookForm">
+        <label>Name</label><input type="text" name="name" required>
+        <label>Email</label><input type="email" name="email" required>
+        <label>Phone</label><input type="tel" name="phone" required>
+        <label>Treatment of Interest</label>
+        <select name="treatment" id="bookSelect"></select>
+        <label>Message</label><textarea name="message"></textarea>
+        <button type="submit" class="btn">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  var treatments = {
+    "Injectables":[
+      ["Botox / Anti-Wrinkle","Smooths dynamic lines — forehead, frown lines and crow's feet — by relaxing the muscles that cause them, for a refreshed, natural result."],
+      ["Dermal Fillers","Restores volume and refines contours in the lips, cheeks, chin and jawline, softening lines and enhancing your natural balance."],
+      ["Sculptra","A collagen-stimulating injectable that gradually restores lost volume for a subtle, natural rejuvenation over time."],
+      ["Lipodissolve (Double Chin Reduction)","A targeted injectable treatment that dissolves stubborn fat under the chin to refine the jawline and profile."],
+      ["Sculptra Buttocks Enhancement","A non-surgical option that uses collagen-stimulating Sculptra to add subtle volume and contour."]
+    ],
+    "Regenerative (PRP)":[
+      ["PRP for Facial Rejuvenation","Uses your own platelet-rich plasma to stimulate natural collagen and improve skin tone, texture and glow."],
+      ["PRP for Hair Loss","Harnesses your own platelet-rich plasma to stimulate hair follicles and support natural regrowth."]
+    ],
+    "Skin & Laser":[
+      ["Microneedling","Stimulates collagen through controlled micro-channels to improve texture, scarring and overall skin quality."],
+      ["Laser Hair Removal","Comfortable, effective reduction of unwanted hair with medical-grade laser technology."],
+      ["Fractional Skin Resurfacing","Targets fine lines, texture and pigmentation to reveal smoother, renewed skin."],
+      ["Intense Pulsed Light (IPL)","Addresses redness, sun damage and pigmentation for a clearer, more even complexion."],
+      ["HydraFacial","A deep-cleansing, hydrating facial that exfoliates, extracts and nourishes for an instant glow."],
+      ["ZO Stimulator Peel & Facials","Medical-grade peels and facials tailored to refresh, brighten and improve skin health."],
+      ["BioRePeel CL3 (Face & Body)","A revitalizing peel that improves texture, tone and radiance with minimal downtime."],
+      ["Dermaplaning","Gently removes dead skin and fine vellus hair for a smooth, luminous finish."]
+    ]
+  };
+
+  var team = [
+    ["Dr. Salim Lalani","Medical Director","https://www.renuemedspa.com/wp-content/uploads/2025/03/651b8d4f4d6195a65d415705_Dr.-Salim-Lalani-p-500.jpg"],
+    ["Nurse Andra Bogolea","Registered Nurse, Injector","https://www.renuemedspa.com/wp-content/uploads/2025/03/651b8d5e7fe4e6d1b7523a19_Andra-Bogolea-p-500.jpg"],
+    ["Nurse Liz Choy","Registered Nurse, Injector","https://www.renuemedspa.com/wp-content/uploads/2025/03/65c17f7a4f86a4382beae96c_Liz-Choy-p-500.jpg"],
+    ["Nurse Mary MacLellan","Registered Nurse, Injector","https://www.renuemedspa.com/wp-content/uploads/2025/03/65c17f9e1a33ce6ff5cb2c19_Mary-MacLellan-p-500.jpg"],
+    ["Nurse Harpreet Sall","Registered Nurse, Injector","https://www.renuemedspa.com/wp-content/uploads/2025/03/651b8dcec78416c9cdd02462_Harpreet-Singh-p-500.jpg"],
+    ["Grace Furey","Aesthetician","https://www.renuemedspa.com/wp-content/uploads/2025/04/grace-furey-renue.jpg"],
+    ["Nurse Jennifer","Registered Nurse, Injector","https://www.renuemedspa.com/wp-content/uploads/2025/08/nurse-jen.jpg"],
+    ["Dr. Sue Kim","OB/GYN & Medical Aesthetician","https://www.renuemedspa.com/wp-content/uploads/2025/03/651b8f90beccf35f3659cdf1_Dr.-Sue-Kim-p-500.jpg"]
+  ];
+
+  // Build treatments
+  var tg = document.getElementById('treatmentGroups');
+  Object.keys(treatments).forEach(function(cat){
+    var g = document.createElement('div'); g.className='tgroup reveal';
+    var h = document.createElement('h3'); h.textContent=cat; g.appendChild(h);
+    var grid = document.createElement('div'); grid.className='tgrid';
+    treatments[cat].forEach(function(t){
+      var c = document.createElement('div'); c.className='tcard';
+      c.innerHTML = '<h4>'+t[0]+'</h4><span class="more">Read More +</span>';
+      c.onclick = function(){ openTreat(cat,t[0],t[1]); };
+      grid.appendChild(c);
+    });
+    g.appendChild(grid); tg.appendChild(g);
+  });
+
+  // Build team
+  var tgr = document.getElementById('teamGrid');
+  team.forEach(function(m){
+    var el = document.createElement('div'); el.className='member reveal';
+    el.innerHTML = '<div class="photo"><img loading="lazy" src="'+m[2]+'" alt="'+m[0]+'"></div><h4>'+m[0]+'</h4><div class="role">'+m[1]+'</div>';
+    tgr.appendChild(el);
+  });
+
+  // Populate booking select
+  var sel = document.getElementById('bookSelect');
+  var opt0 = document.createElement('option'); opt0.value=''; opt0.textContent='Select a treatment…'; sel.appendChild(opt0);
+  Object.keys(treatments).forEach(function(cat){
+    var og = document.createElement('optgroup'); og.label=cat;
+    treatments[cat].forEach(function(t){
+      var o=document.createElement('option'); o.value=t[0]; o.textContent=t[0]; og.appendChild(o);
+    });
+    sel.appendChild(og);
+  });
+  var oc=document.createElement('option'); oc.value='General Consultation'; oc.textContent='General Consultation'; sel.appendChild(oc);
+
+  function openTreat(cat,name,desc){
+    document.getElementById('tmCat').textContent=cat;
+    document.getElementById('tmName').textContent=name;
+    document.getElementById('tmDesc').textContent=desc;
+    openOv('treatModal');
+  }
+  function openBook(pre){
+    if(pre){ sel.value = [].some.call(sel.options,function(o){return o.value===pre;}) ? pre : ''; }
+    openOv('bookModal');
+  }
+  function openOv(id){ document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeModal(id){ document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+  document.querySelectorAll('.modal-ov').forEach(function(ov){
+    ov.addEventListener('click',function(e){ if(e.target===ov){ov.classList.remove('open');document.body.style.overflow='';} });
+  });
+
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('bookInner').innerHTML='<div class="success">Thank you — we will be in touch shortly to confirm your consultation.</div>';
+  });
+
+  // Nav toggle
+  var ham=document.getElementById('ham'), nl=document.getElementById('navLinks');
+  ham.addEventListener('click',function(){ nl.classList.toggle('open'); });
+  nl.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nl.classList.remove('open'); }); });
+
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
